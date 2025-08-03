@@ -14,7 +14,5 @@ public class P04_PineTreeAsterisks {
             System.out.println("*************");
             System.out.println("      *");
 
-
-
     }
 }
