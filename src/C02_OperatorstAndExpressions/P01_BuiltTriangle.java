@@ -17,9 +17,10 @@ public class P01_BuiltTriangle {
                    typeOfTheTriangle = "multifaceted";
                    System.out.println("The triangle is " + typeOfTheTriangle);
                 }
-                if((angleA==angleB || angleA==angleC && angleC!=angleB)
+                if((angleA<90 && angleB<90 && angleC<90) &&
+                        ((angleA==angleB || angleA==angleC && angleC!=angleB)
                     || (angleB==angleA || angleB==angleC && angleC!=angleA)
-                     || (angleC==angleB || angleC==angleA && angleB!=angleA)){
+                     || (angleC==angleB || angleC==angleA && angleB!=angleA))){
                          typeOfTheTriangle = "isosceles";
                      System.out.println("The triangle is " + typeOfTheTriangle);
                 }
@@ -31,17 +32,21 @@ public class P01_BuiltTriangle {
                 typeOfTheTriangle = "obtuse";
                 System.out.println("The triangle is " + typeOfTheTriangle);
                 }
-                if(angleA==90 || angleB==90 || angleC==90){
+                if((angleA==90 && angleB<90 && angleC<90)
+                ||(angleA<90 && angleB==90 && angleC<90)
+                ||(angleA<90 && angleB<90 && angleC==90)){
                 typeOfTheTriangle = "right-angled";
                 System.out.println("The triangle is " + typeOfTheTriangle);
                 }
-                if(angleA<90 || angleB<90 || angleC<90){
+                if(angleA<90 && angleB<90 && angleC<90){
                 typeOfTheTriangle = "acute";
                 System.out.println("The triangle is " + typeOfTheTriangle);
                 }
         }
         else{
             System.out.println("The triangle can't be built");
+
         }
+
     }
 }
