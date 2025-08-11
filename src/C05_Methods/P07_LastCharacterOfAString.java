@@ -9,8 +9,12 @@ public class P07_LastCharacterOfAString {
         lastCharacterOfAString(text);
     }
     public static void lastCharacterOfAString(String input){
-        char lastChar = input.charAt(input.length()-1);
-        //String lastChar = input.substring(input.length() - 1);
-        System.out.println("The last char is an text is: " + "'" + lastChar + "'");
+        if(input.isEmpty()){
+            System.out.println("Thera is no last character");
+        }else {
+            char lastChar = input.charAt(input.length() - 1);
+            //String lastChar = input.substring(input.length() - 1);
+            System.out.println("The last char is an text is: " + "'" + lastChar + "'");
+        }
     }
 }
